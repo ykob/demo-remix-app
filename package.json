@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api": "pnpm -F \"api\"",
+    "db": "pnpm -F \"db\"",
+    "web": "pnpm -F \"web\""
   },
   "keywords": [],
   "author": "",
