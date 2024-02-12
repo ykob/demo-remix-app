@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "start": "cross-env NODE_ENV=\"production\" node ./dist"
   },
   "author": "Yoichi Kobayashi",
   "license": "ISC",
