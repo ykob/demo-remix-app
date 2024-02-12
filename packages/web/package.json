@@ -9,8 +9,7 @@
     "build": "remix vite:build",
     "start": "remix-serve ./build/server/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Yoichi Kobayashi",
   "license": "ISC",
   "dependencies": {
     "@remix-run/node": "^2.6.0",

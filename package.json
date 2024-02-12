@@ -9,8 +9,7 @@
     "web": "pnpm -F \"web\"",
     "dev": "turbo dev"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Yoichi Kobayashi",
   "license": "ISC",
   "engines": {
     "pnpm": "8.15.0"

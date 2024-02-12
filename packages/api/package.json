@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Yoichi Kobayashi",
   "license": "ISC",
   "dependencies": {
     "@t3-oss/env-core": "^0.9.2",
