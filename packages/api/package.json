@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts"
+    "dev": "vite",
+    "build": "vite build"
   },
   "author": "Yoichi Kobayashi",
   "license": "ISC",
@@ -17,8 +19,8 @@
     "@types/node": "^20.11.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "nodemon": "^3.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite": "^5.1.1",
+    "vite-plugin-node": "^3.1.0"
   }
 }

@@ -7,7 +7,8 @@
     "api": "pnpm -F \"api\"",
     "db": "pnpm -F \"db\"",
     "web": "pnpm -F \"web\"",
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "build": "turbo build"
   },
   "author": "Yoichi Kobayashi",
   "license": "ISC",

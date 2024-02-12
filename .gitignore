@@ -1,6 +1,7 @@
 .cache
 .env
 .turbo
-node_modules
 build
+dist
+node_modules
 public/build
