@@ -14,19 +14,28 @@ updates:
       time: '09:00'
       timezone: 'Asia/Tokyo'
     groups:
+      eslint:
+        patterns:
+          - 'eslint/*'
+          - '@typescript-eslint/*'
+      express:
+        patterns:
+          - 'express*'
+          - '@types/express'
+      prettier:
+        patterns:
+          - 'prettier*'
       react:
         patterns:
           - 'react'
           - 'react-dom'
           - '@types/react'
           - '@types/react-dom'
-      eslint:
+      remix:
         patterns:
-          - 'eslint/*'
-      typescript-eslint:
-        patterns:
-          - '@typescript-eslint/*'
+          - 'remix*'
+          - '@remix-run/*'
       vite:
         patterns:
-          - 'vite'
+          - 'vite*'
           - '@vitejs/*'
