@@ -13,7 +13,7 @@
   "author": "Yoichi Kobayashi",
   "license": "ISC",
   "engines": {
-    "pnpm": "8.15.0"
+    "pnpm": "8.15.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
