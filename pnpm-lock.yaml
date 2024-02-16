@@ -89,9 +89,18 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.2.19
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
       vite:
         specifier: ^5.1.1
         version: 5.1.1(@types/node@20.11.17)
+
+  packages/eslint-config-custom:
+    devDependencies:
+      eslint-config-turbo:
+        specifier: ^1.10.12
+        version: 1.12.4(eslint@8.56.0)
 
 packages:
 
@@ -2168,6 +2177,11 @@ packages:
       esutils: 2.0.3
     dev: true
 
+  /dotenv@16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: true
+
   /dotenv@16.4.1:
     resolution: {integrity: sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ==}
     engines: {node: '>=12'}
@@ -2312,6 +2326,24 @@ packages:
   /escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /eslint-config-turbo@1.12.4(eslint@8.56.0):
+    resolution: {integrity: sha512-5hqEaV6PNmAYLL4RTmq74OcCt8pgzOLnfDVPG/7PUXpQ0Mpz0gr926oCSFukywKKXjdum3VHD84S7Z9A/DqTAw==}
+    peerDependencies:
+      eslint: '>6.6.0'
+    dependencies:
+      eslint: 8.56.0
+      eslint-plugin-turbo: 1.12.4(eslint@8.56.0)
+    dev: true
+
+  /eslint-plugin-turbo@1.12.4(eslint@8.56.0):
+    resolution: {integrity: sha512-3AGmXvH7E4i/XTWqBrcgu+G7YKZJV/8FrEn79kTd50ilNsv+U3nS2IlcCrQB6Xm2m9avGD9cadLzKDR1/UF2+g==}
+    peerDependencies:
+      eslint: '>6.6.0'
+    dependencies:
+      dotenv: 16.0.3
+      eslint: 8.56.0
     dev: true
 
   /eslint-scope@7.2.2:

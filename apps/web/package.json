@@ -24,6 +24,7 @@
     "@remix-run/dev": "^2.6.0",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "eslint-config-custom": "workspace:*",
     "vite": "^5.1.1"
   }
 }
