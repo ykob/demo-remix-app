@@ -16,7 +16,7 @@
     "@remix-run/node": "^2.6.0",
     "@remix-run/react": "^2.6.0",
     "@remix-run/serve": "^2.6.0",
-    "isbot": "4",
+    "isbot": "5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,6 +25,6 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "eslint-config-custom": "workspace:*",
-    "vite": "^5.1.1"
+    "vite": "^5.1.3"
   }
 }
