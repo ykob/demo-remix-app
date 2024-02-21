@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <p>
-      Layout.
-    </p>
-  );
+  return <p>Layout.</p>;
 }
