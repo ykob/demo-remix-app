@@ -2,7 +2,6 @@
   "name": "demo-remix-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "api": "pnpm -F \"api\"",
     "db": "pnpm -F \"db\"",
