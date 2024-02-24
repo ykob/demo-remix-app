@@ -10,7 +10,7 @@
   "author": "Yoichi Kobayashi",
   "license": "ISC",
   "devDependencies": {
-    "prisma": "^5.9.1"
+    "prisma": "^5.10.2"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
