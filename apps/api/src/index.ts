@@ -1,12 +1,12 @@
-import express from "express";
+import express from 'express';
 
 const app = express();
 const port = 4000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   app.listen(port, () => {
     console.info(`Server is running on http://localhost:${port}/`);
   });

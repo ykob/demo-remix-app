@@ -1,16 +1,16 @@
-import { PrismaClient } from "@prisma/client";
-import { genSaltSync, hashSync } from "bcryptjs";
+import { PrismaClient } from '@prisma/client';
+import { genSaltSync, hashSync } from 'bcryptjs';
 
 const prisma = new PrismaClient();
 
 const users = [
   {
-    email: "alice@prisma.io",
-    password: "12345678",
+    email: 'alice@prisma.io',
+    password: '12345678',
   },
   {
-    email: "bob@prisma.io",
-    password: "87654321",
+    email: 'bob@prisma.io',
+    password: '87654321',
   },
 ];
 
