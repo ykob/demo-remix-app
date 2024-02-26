@@ -5,7 +5,9 @@
   "scripts": {
     "migrate": "prisma migrate dev --name init",
     "seed": "ts-node ./seed.ts",
-    "gui": "prisma studio"
+    "gui": "prisma studio",
+    "lint": "eslint .",
+    "format": "prettier . --write --cache"
   },
   "author": "Yoichi Kobayashi",
   "license": "ISC",
@@ -14,6 +16,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "eslint-config-custom": "workspace:*"
   }
 }
