@@ -13,16 +13,16 @@
   "author": "Yoichi Kobayashi",
   "license": "ISC",
   "dependencies": {
-    "@remix-run/node": "^2.6.0",
-    "@remix-run/react": "^2.6.0",
-    "@remix-run/serve": "^2.6.0",
+    "@remix-run/node": "^2.7.2",
+    "@remix-run/react": "^2.7.2",
+    "@remix-run/serve": "^2.7.2",
     "eslint": "^8.57.0",
     "isbot": "5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.6.0",
+    "@remix-run/dev": "^2.7.2",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "eslint-config-custom": "workspace:*",
