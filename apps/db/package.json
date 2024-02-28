@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "generate": "prisma generate",
     "migrate": "prisma migrate dev --name init",
     "seed": "ts-node ./seed.ts",
     "gui": "prisma studio",
