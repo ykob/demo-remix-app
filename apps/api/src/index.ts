@@ -1,15 +1,17 @@
 import express from 'express';
+import auth from './api/auth/auth.routes.js';
+import users from './api/users/users.routes.js';
 
 const app = express();
-const port = 4000;
+const port = 3000;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
-if (process.env.NODE_ENV === 'production') {
-  app.listen(port, () => {
-    console.info(`Server is running on http://localhost:${port}/`);
-  });
-}
-
-export const viteNodeApp = app;
+app.use('/auth', auth);
+app.use('/users', users);
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
