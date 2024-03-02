@@ -9,6 +9,7 @@ export default defineConfig({
     ...VitePluginNode({
       adapter: 'express',
       appPath: './src/index.ts',
+      exportName: 'viteNodeApp',
     }),
   ],
 });

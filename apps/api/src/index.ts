@@ -3,7 +3,7 @@ import auth from './api/auth/auth.routes.js';
 import users from './api/users/users.routes.js';
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,3 +15,5 @@ app.use('/users', users);
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+export const viteNodeApp = app;
