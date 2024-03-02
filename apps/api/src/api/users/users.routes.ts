@@ -1,4 +1,4 @@
-import { genSaltSync, hashSync } from 'bcryptjs';
+import bcryptjs from 'bcryptjs';
 import { Request, Response, Router } from 'express';
 import { isAuthenticated } from '../../middlewares.js';
 import {
@@ -25,7 +25,10 @@ router.get('/:id', isAuthenticated, async (req: Request, res: Response) => {
 
 router.post('/', isAuthenticated, async (req: Request, res: Response) => {
   const { email, password } = req.body;
-  const hashedPassword = await hashSync(password, genSaltSync(10));
+  const hashedPassword = await bcryptjs.hashSync(
+    password,
+    bcryptjs.genSaltSync(10),
+  );
   const user = await createUserByEmailAndPassword(email, hashedPassword);
 
   res.json({ user });

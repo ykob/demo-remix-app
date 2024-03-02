@@ -1,4 +1,4 @@
-import { genSaltSync, hashSync } from 'bcryptjs';
+import bcryptjs from 'bcryptjs';
 import { prisma } from '../../utils/prisma.js';
 
 export const findUsers = async () => {
@@ -31,7 +31,10 @@ export const createUserByEmailAndPassword = async (
   email: string,
   password: string,
 ) => {
-  const hashedPassword = await hashSync(password, genSaltSync(10));
+  const hashedPassword = await bcryptjs.hashSync(
+    password,
+    bcryptjs.genSaltSync(10),
+  );
   const user = await prisma.user.create({
     data: {
       email,

@@ -1,6 +1,6 @@
-import { compare } from 'bcryptjs';
+import bcryptjs from 'bcryptjs';
 import express from 'express';
-import { verify } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 import { hashToken } from '../../utils/hash-token.js';
 import { generateTokens } from '../../utils/jwt.js';
@@ -65,7 +65,10 @@ router.post('/login', async (req, res, next) => {
       throw new Error('Invalid credentials.');
     }
 
-    const validPassword = await compare(password, existingUser.password);
+    const validPassword = await bcryptjs.compare(
+      password,
+      existingUser.password,
+    );
 
     if (!validPassword) {
       res.status(403);
@@ -96,7 +99,7 @@ router.post('/refresh-token', async (req, res, next) => {
       throw new Error('Missing refresh token.');
     }
 
-    const payload = verify(refreshToken, process.env.JWT_REFRESH_SECRET!);
+    const payload = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET!);
 
     if (typeof payload === 'string' || payload.jti === undefined) {
       res.status(400);
