@@ -6,6 +6,7 @@
     "api": "pnpm -F \"api\"",
     "db": "pnpm -F \"db\"",
     "web": "pnpm -F \"web\"",
+    "generate": "turbo generate",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",

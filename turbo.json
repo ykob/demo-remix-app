@@ -8,6 +8,9 @@
     "dev": {
       "dependsOn": ["^dev"]
     },
+    "generate": {
+      "dependsOn": ["^generate"]
+    },
     "format": {
       "dependsOn": ["^format"]
     },
