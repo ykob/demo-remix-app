@@ -5,3 +5,6 @@ build
 dist
 node_modules
 public/build
+## Panda
+styled-system
+styled-system-studio
