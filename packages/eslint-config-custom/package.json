@@ -8,6 +8,6 @@
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^1.10.12"
+    "eslint-config-turbo": "^1.12.5"
   }
 }
