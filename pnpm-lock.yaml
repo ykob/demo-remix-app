@@ -23,13 +23,13 @@ importers:
         version: 3.2.5
       prettier-plugin-organize-imports:
         specifier: ^3.2.4
-        version: 3.2.4(prettier@3.2.5)(typescript@5.4.2)
+        version: 3.2.4(prettier@3.2.5)(typescript@5.4.3)
       turbo:
         specifier: ^1.12.5
         version: 1.12.5
       typescript:
-        specifier: ^5.4.2
-        version: 5.4.2
+        specifier: ^5.4.3
+        version: 5.4.3
 
   apps/api:
     dependencies:
@@ -38,7 +38,7 @@ importers:
         version: 5.11.0(prisma@5.11.0)
       '@t3-oss/env-core':
         specifier: ^0.9.2
-        version: 0.9.2(typescript@5.4.2)(zod@3.22.4)
+        version: 0.9.2(typescript@5.4.3)(zod@3.22.4)
       bcryptjs:
         specifier: ^2.4.3
         version: 2.4.3
@@ -2036,7 +2036,7 @@ packages:
     resolution: {integrity: sha512-RbhOOTCNoCrbfkRyoXODZp75MlpiHMgbE5MEBZAnnnLyQNgrigEj4p0lzsMDyc1zVsJDLrivB58tgg3emX0eEA==}
     dev: true
 
-  /@t3-oss/env-core@0.9.2(typescript@5.4.2)(zod@3.22.4):
+  /@t3-oss/env-core@0.9.2(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-KgWXljUTHgO3o7GMZQPAD5+P+HqpauMNNHowlm7V2b9IeMitSUpNKwG6xQrup/xARWHTdxRVIl0mSI4wCevQhQ==}
     peerDependencies:
       typescript: '>=5.0.0'
@@ -2045,7 +2045,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      typescript: 5.4.2
+      typescript: 5.4.3
       zod: 3.22.4
     dev: false
 
@@ -6471,7 +6471,7 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  /prettier-plugin-organize-imports@3.2.4(prettier@3.2.5)(typescript@5.4.2):
+  /prettier-plugin-organize-imports@3.2.4(prettier@3.2.5)(typescript@5.4.3):
     resolution: {integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -6485,7 +6485,7 @@ packages:
         optional: true
     dependencies:
       prettier: 3.2.5
-      typescript: 5.4.2
+      typescript: 5.4.3
     dev: true
 
   /prettier@2.8.8:
@@ -7497,6 +7497,11 @@ packages:
 
   /typescript@5.4.2:
     resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
