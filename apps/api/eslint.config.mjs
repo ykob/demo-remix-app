@@ -1,4 +1,4 @@
-import customConfigs from 'eslint-config-custom/db.js';
+import customConfigs from 'eslint-config-custom/api.js';
 
 export default [
   ...customConfigs,

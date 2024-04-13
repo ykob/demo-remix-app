@@ -1,10 +1,16 @@
-/** @type {import('eslint').ESLint.ConfigData} */
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'turbo',
-    'prettier',
-  ],
-  parser: '@typescript-eslint/parser',
-};
+import eslint from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintConfigTurbo from 'eslint-config-turbo';
+import tseslint from 'typescript-eslint';
+
+export default [
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  eslintConfigTurbo,
+  eslintConfigPrettier,
+  {
+    languageOptions: {
+      parser: tseslint.parser,
+    },
+  },
+];
