@@ -1,12 +1,14 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintConfigTurbo from 'eslint-config-turbo';
 import tseslint from 'typescript-eslint';
+
+const compat = new FlatCompat({});
 
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  eslintConfigTurbo,
+  ...compat.extends('plugin:turbo/recommended'),
   eslintConfigPrettier,
   {
     languageOptions: {
