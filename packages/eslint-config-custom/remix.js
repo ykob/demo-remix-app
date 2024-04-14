@@ -1,18 +1,18 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import eslint from '@eslint/js';
 import eslintConfigRemix from '@remix-run/eslint-config';
-import eslintConfigRemixNode from '@remix-run/eslint-config/node.js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintConfigTurbo from 'eslint-config-turbo';
 import hooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
+
+const compat = new FlatCompat();
 
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigRemix,
-  eslintConfigRemixNode,
-  eslintConfigTurbo,
+  ...compat.extends('plugin:turbo/recommended'),
   eslintConfigPrettier,
   {
     ignores: ['build', 'styled-system'],
