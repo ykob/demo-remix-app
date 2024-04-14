@@ -1,5 +1,5 @@
-module.exports = {
+export default {
   plugins: {
     '@pandacss/dev/postcss': {},
   },
-}
+};
