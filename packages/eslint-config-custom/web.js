@@ -1,6 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import eslint from '@eslint/js';
-import eslintConfigRemix from '@remix-run/eslint-config';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import hooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -11,7 +10,6 @@ const compat = new FlatCompat();
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  eslintConfigRemix,
   ...compat.extends('plugin:turbo/recommended'),
   eslintConfigPrettier,
   {

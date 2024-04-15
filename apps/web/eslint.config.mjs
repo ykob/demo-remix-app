@@ -1,4 +1,4 @@
-import customConfigs from 'eslint-config-custom/remix.js';
+import customConfigs from 'eslint-config-custom/web.js';
 
 export default [
   ...customConfigs,
