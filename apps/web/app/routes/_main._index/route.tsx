@@ -13,7 +13,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     body: JSON.stringify({ email, password }),
   });
 
-  return response.json();
+  const responseBody = await response.json();
+  return responseBody;
 };
 
 export default function Home() {
@@ -38,7 +39,12 @@ export default function Home() {
           <button type="submit">Submit</button>
         </div>
       </Form>
-      <div>{data}</div>
+      {data ? (
+        <div>
+          <div>accessToken: {data.accessToken}</div>
+          <div>refreshToken: {data.refreshToken}</div>
+        </div>
+      ) : null}
     </div>
   );
 }
