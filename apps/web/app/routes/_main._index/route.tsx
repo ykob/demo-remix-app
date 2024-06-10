@@ -5,16 +5,21 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const body = await request.formData();
   const email = body.get('email');
   const password = body.get('password');
-  const response = await fetch('http://localhost:4000/auth/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email, password }),
-  });
 
-  const responseBody = await response.json();
-  return responseBody;
+  try {
+    const response = await fetch('http://localhost:4000/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const responseBody = await response.json();
+    return responseBody;
+  } catch (error) {
+    return new Response('Unauthorized', { status: 401 });
+  }
 };
 
 export default function Home() {
@@ -41,6 +46,7 @@ export default function Home() {
       </Form>
       {data ? (
         <div>
+          <div>{data}</div>
           <div>accessToken: {data.accessToken}</div>
           <div>refreshToken: {data.refreshToken}</div>
         </div>
