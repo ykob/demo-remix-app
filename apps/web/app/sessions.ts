@@ -13,9 +13,8 @@ const { getSession, commitSession, destroySession } =
   createCookieSessionStorage<SessionData, SessionFlashData>({
     cookie: {
       name: '__session',
-      expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       httpOnly: true,
-      maxAge: 60,
+      maxAge: 24 * 60 * 60 * 1000,
       path: '/',
       sameSite: 'lax',
       secrets: ['s3cret1'],
