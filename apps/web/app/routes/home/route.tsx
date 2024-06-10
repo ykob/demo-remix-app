@@ -1,3 +1,5 @@
+export const loader = () => {};
+
 export default function Home() {
   return (
     <div>
