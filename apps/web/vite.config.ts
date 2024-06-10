@@ -7,6 +7,12 @@ export default defineConfig({
       ignoredRouteFiles: ['**/.*'],
     }),
   ],
+  resolve: {
+    alias: {
+      '~': `${__dirname}/app/`,
+      'styled-system': `${__dirname}/styled-system/`,
+    },
+  },
   server: {
     host: true,
     port: 3000,
