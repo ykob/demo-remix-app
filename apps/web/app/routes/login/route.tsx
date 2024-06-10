@@ -22,7 +22,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   }
 };
 
-export default function Home() {
+export default function Login() {
   const data = useActionData<typeof action>();
 
   return (
