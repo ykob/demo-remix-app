@@ -41,7 +41,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export default function Login() {
-  const data = useActionData<typeof action>();
+  const actionData = useActionData<typeof action>();
 
   return (
     <div>
@@ -62,12 +62,13 @@ export default function Login() {
           <button type="submit">Submit</button>
         </div>
       </Form>
-      {data ? (
+      {actionData?.error && <div>{actionData.error}</div>}
+      {actionData?.data && (
         <div>
-          <div>accessToken: {data.accessToken}</div>
-          <div>refreshToken: {data.refreshToken}</div>
+          <div>Access Token: {actionData.data.accessToken}</div>
+          <div>Refresh Token: {actionData.data.refreshToken}</div>
         </div>
-      ) : null}
+      )}
     </div>
   );
 }
