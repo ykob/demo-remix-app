@@ -34,9 +34,9 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     session.set('refreshToken', data.refreshToken);
     headers.append('Set-Cookie', await commitSession(session));
 
-    return json(data, { headers });
+    return json({ data, error: null }, { headers });
   } catch (error) {
-    return new Response('Unauthorized', { status: 401 });
+    return json({ data: null, error: 'Unauthorized' });
   }
 };
 
